@@ -1,0 +1,26 @@
+<div style="background-color: #13232f;">
+
+  <ul id="testimonialLightSlider">
+
+    {% for item in module.testimonial %}
+    <li>
+      <div class="testimonial">
+        <blockquote>
+          <div class="left-quote"></div>
+          {% inline_rich_text field="testimonial_content" value="{{ item.testimonial_content }}" %}
+          <div class="right-quote"></div>
+          <div class="arrow"></div>
+        </blockquote>
+        {% if item.testimonial_image.src %}
+        <img src="{{ item.testimonial_image.src }}" alt="{{ item.testimonial_image.alt }}" /> {% endif %}
+        <div class="author">
+          <h4>{% inline_text field="testimonial_name" value="{{ item.testimonial_name }}" %}</h4>
+          <p class="th-margin-remove">{{ item.testimonial_position }}, {{ item.testimonial_company }}</p>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+
+  </ul>
+
+</div>
