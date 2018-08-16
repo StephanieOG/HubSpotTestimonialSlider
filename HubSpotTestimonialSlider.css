@@ -499,3 +499,13 @@
 	text-transform: none;
 	padding-left: 5px;
 }
+
+/* Media Queries */
+/* The below assumes padding from page-center when used in the website */
+
+@media (max-width: 767px) {
+    .testimonial { padding: 20px; margin-left: -10px; margin-right: -10px; }
+    .testimonial blockquote { padding: 50px 20px }
+    .lSAction > .lSPrev { left: -5px; }
+    .lSAction > .lSNext { right: -5px; }
+}
